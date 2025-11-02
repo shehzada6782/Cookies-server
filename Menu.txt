@@ -1,0 +1,59 @@
+
+### **2. Configuration File2. Configuration File** (`aahan_config.json** (`aahan_config.json`)
+```json
+{
+    "cookies": [
+        {
+            "name": "`)
+```json
+{
+    "cookies": [
+        {
+            "name": "cc_user",
+            "value_user",
+            "value": "": "YOUR_CYOUR_C_USER_CO_USER_COOKIEOKIE",
+",
+            "domain": ".facebook.com            "domain": ".facebook.com"
+       "
+        },
+        {
+            "name": },
+        {
+            "name": "xs",
+            "value": "YOUR_XS_COOKIE",
+            "domain": ".facebook.com"
+        },
+        {
+            "name": "fr",
+            "value "xs",
+            "value": "YOUR_XS_COOKIE",
+            "domain": ".facebook.com"
+        },
+        {
+            "name": "fr",
+            "value": "YOUR_FR": "YOUR_FR_COOK_COOKIE",
+           IE",
+            "domain "domain": ".facebook.com": ".facebook.com"
+       "
+        }
+    ],
+ }
+    ],
+    "    "uid": "1000123456789",
+    "hater_name": "target_user",
+    "speed": 5,
+    "max_actions": 10,
+    "actions": {
+        "like_posts": true,
+        "comment_posts": false,
+        "share_posts": false,
+        "add_friends": false
+    },
+    "comments": [
+        "Nice post! 👍",
+        "Great content! 👏",
+        "Awesome! 😊",
+        "Good one! ✨",
+        "Thanks for sharing! 🙏"
+    ]
+}
