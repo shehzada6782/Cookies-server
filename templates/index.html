@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AAHAN File Bot</title>
+    <title>AAHAN Facebook Bot</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-900 text-white min-h-screen">
     <div class="container mx-auto px-4 py-8 max-w-4xl">
         <!-- Header -->
         <div class="text-center mb-8">
-            <h1 class="text-4xl font-bold text-green-400 mb-2">AAHAN FILE BOT</h1>
-            <p class="text-gray-400">Upload TXT Files for Cookies & Messages</p>
+            <h1 class="text-4xl font-bold text-blue-400 mb-2">AAHAN FACEBOOK BOT</h1>
+            <p class="text-gray-400">Latest Facebook Cookie Format Support</p>
         </div>
 
         <!-- Main Form -->
@@ -19,43 +19,45 @@
             <form id="botForm" enctype="multipart/form-data" class="space-y-8">
                 
                 <!-- Cookies Section -->
-                <div class="border border-gray-600 rounded-lg p-6">
-                    <h2 class="text-2xl font-bold text-green-400 mb-4">🔐 COOKIES</h2>
+                <div class="border border-blue-500 rounded-lg p-6 bg-gray-750">
+                    <h2 class="text-2xl font-bold text-blue-400 mb-4">🔐 FACEBOOK COOKIES</h2>
+                    <p class="text-sm text-gray-400 mb-4">Supports latest Facebook cookie format with wl_cbv, locale, fr, fbl_st, c_user, datr, xs, vpd, pas</p>
                     
                     <!-- File Upload -->
                     <div class="mb-4">
-                        <label class="block text-sm font-medium text-green-400 mb-2">
+                        <label class="block text-sm font-medium text-blue-400 mb-2">
                             Upload Cookies.txt File
                         </label>
                         <input type="file" id="cookies_file" accept=".txt"
-                            class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-white">
-                        <p class="text-xs text-gray-400 mt-2">Upload .txt file with Facebook cookies (one per line: name=value)</p>
+                            class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white">
+                        <p class="text-xs text-gray-400 mt-2">Upload .txt file with Facebook cookies in the format: name=value</p>
                     </div>
 
                     <div class="text-center text-gray-400 font-semibold my-4">OR</div>
 
                     <!-- Text Area -->
                     <div>
-                        <label class="block text-sm font-medium text-green-400 mb-2">
-                            Paste Cookies (One per line)
+                        <label class="block text-sm font-medium text-blue-400 mb-2">
+                            Paste Cookie String
                         </label>
                         <textarea id="cookies_text" rows="4"
-                            class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-white font-mono text-sm"
-                            placeholder="c_user=1000123456789&#10;xs=ABC123XYZ456DEF789&#10;fr=DEF789GHI012JKL345&#10;datr=MN0123OPQ456RST789"></textarea>
+                            class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white font-mono text-sm"
+                            placeholder="wl_cbv=v2%3Bclient_version%3A2971%3Btimestamp%3A1762045256; locale=en_US; fr=0aF3ecRo6s7aVc2an.AWXyzk8ogeylk.BpBq0k..AAA.0.0.BpBq1J.AWdTfe10us9s8FILvzw; fbl_st=100715924%3BT%3A29367420; c_user=61568793447010; datr=R60GaXzmSuFM5e22uBbHJ8nl; xs=31%3AJGcssyFHCsQPWQ%3A2%3A1762045251%3A-1%3A-1; vpd=v1%3B835x428x3; pas=61568793447010%3A5h4YHcDBUj"></textarea>
+                        <p class="text-xs text-gray-400 mt-2">Paste your full Facebook cookie string (semicolon separated)</p>
                     </div>
                 </div>
 
                 <!-- Messages Section -->
-                <div class="border border-gray-600 rounded-lg p-6">
-                    <h2 class="text-2xl font-bold text-blue-400 mb-4">💬 MESSAGES</h2>
+                <div class="border border-green-500 rounded-lg p-6 bg-gray-750">
+                    <h2 class="text-2xl font-bold text-green-400 mb-4">💬 MESSAGES</h2>
                     
                     <!-- File Upload -->
                     <div class="mb-4">
-                        <label class="block text-sm font-medium text-blue-400 mb-2">
+                        <label class="block text-sm font-medium text-green-400 mb-2">
                             Upload Messages.txt File
                         </label>
                         <input type="file" id="messages_file" accept=".txt"
-                            class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white">
+                            class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-white">
                         <p class="text-xs text-gray-400 mt-2">Upload .txt file with messages (one message per line)</p>
                     </div>
 
@@ -63,28 +65,27 @@
 
                     <!-- Text Area -->
                     <div>
-                        <label class="block text-sm font-medium text-blue-400 mb-2">
-                            Paste Messages (One per line)
+                        <label class="block text-sm font-medium text-green-400 mb-2">
+                            Paste Messages
                         </label>
                         <textarea id="messages_text" rows="4"
-                            class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white font-mono text-sm"
+                            class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-white font-mono text-sm"
                             placeholder="Hello! 👋&#10;Hi there! 😊&#10;How are you?&#10;Good morning! 🌞"></textarea>
                     </div>
                 </div>
 
-                <!-- Other Settings -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <!-- UID -->
+                <!-- Settings -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div>
                         <label class="block text-sm font-medium text-yellow-400 mb-2">
                             Your Facebook UID *
                         </label>
                         <input type="text" id="uid" required
                             class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 text-white"
-                            placeholder="1000123456789">
+                            placeholder="61568793447010">
+                        <p class="text-xs text-gray-400 mt-1">Your c_user value from cookies</p>
                     </div>
 
-                    <!-- Target -->
                     <div>
                         <label class="block text-sm font-medium text-yellow-400 mb-2">
                             Target Username *
@@ -92,29 +93,30 @@
                         <input type="text" id="hater_name" required
                             class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 text-white"
                             placeholder="username">
+                        <p class="text-xs text-gray-400 mt-1">Facebook profile username</p>
                     </div>
 
-                    <!-- Speed -->
                     <div>
                         <label class="block text-sm font-medium text-yellow-400 mb-2">
                             Delay (Seconds) *
                         </label>
-                        <input type="number" id="speed_seconds" required min="10" max="120" value="30"
+                        <input type="number" id="speed_seconds" required min="15" max="120" value="30"
                             class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 text-white">
+                        <p class="text-xs text-gray-400 mt-1">15-120 seconds recommended</p>
                     </div>
                 </div>
 
                 <!-- Submit Button -->
                 <button type="submit" id="startBtn"
-                    class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 text-lg mt-6">
-                    🚀 START MESSAGE BOT
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 text-lg mt-6">
+                    🚀 START FACEBOOK BOT
                 </button>
             </form>
         </div>
 
         <!-- Progress Section -->
         <div id="progressSection" class="hidden bg-gray-800 rounded-lg shadow-lg p-6 mb-6">
-            <h3 class="text-xl font-bold text-green-400 mb-4">BOT PROGRESS</h3>
+            <h3 class="text-xl font-bold text-blue-400 mb-4">BOT PROGRESS</h3>
             
             <!-- Progress Bar -->
             <div class="bg-gray-700 rounded-full h-4 mb-4">
@@ -123,61 +125,65 @@
             
             <!-- Status -->
             <div class="mb-4">
-                <p id="statusMessage" class="text-lg font-semibold text-white">Starting bot...</p>
-                <div class="flex justify-between text-sm mt-2">
-                    <span id="sentCount" class="text-green-400">✅ Sent: 0</span>
-                    <span id="failedCount" class="text-red-400">❌ Failed: 0</span>
-                    <span id="totalCount" class="text-blue-400">📊 Total: 0</span>
+                <p id="statusMessage" class="text-lg font-semibold text-white mb-2">Starting bot...</p>
+                <div class="grid grid-cols-3 gap-4 text-sm">
+                    <div class="text-center">
+                        <span class="text-green-400 font-bold" id="sentCount">0</span>
+                        <div class="text-gray-400">Sent</div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-red-400 font-bold" id="failedCount">0</span>
+                        <div class="text-gray-400">Failed</div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-blue-400 font-bold" id="totalCount">0</span>
+                        <div class="text-gray-400">Total</div>
+                    </div>
                 </div>
             </div>
             
             <!-- Logs -->
             <div class="border border-gray-600 rounded-lg p-4">
-                <h4 class="font-semibold text-green-400 mb-3">ACTIVITY LOG:</h4>
+                <h4 class="font-semibold text-blue-400 mb-3">ACTIVITY LOG:</h4>
                 <div id="logs" class="bg-gray-900 p-3 rounded max-h-80 overflow-y-auto text-sm space-y-2 font-mono">
-                    <div class="text-gray-400">Waiting for logs...</div>
+                    <div class="text-gray-400">Waiting for activity logs...</div>
                 </div>
             </div>
         </div>
 
-        <!-- Instructions -->
+        <!-- Cookie Format Instructions -->
         <div class="bg-gray-800 rounded-lg shadow-lg p-6">
-            <h3 class="text-xl font-bold text-yellow-400 mb-4">📋 HOW TO USE</h3>
+            <h3 class="text-xl font-bold text-yellow-400 mb-4">📋 FACEBOOK COOKIE FORMAT</h3>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Cookies Instructions -->
-                <div class="bg-gray-700 p-4 rounded-lg">
-                    <h4 class="font-semibold text-green-400 mb-2">🔐 Cookies Files:</h4>
-                    <ul class="text-sm text-gray-300 space-y-2 list-disc list-inside">
-                        <li>Get cookies from Chrome: F12 → Application → Cookies → facebook.com</li>
-                        <li>Required cookies: c_user, xs, fr, datr</li>
-                        <li>Format: name=value (one per line)</li>
-                        <li>Example cookies.txt content:</li>
-                    </ul>
-                    <div class="mt-2 p-3 bg-gray-900 rounded font-mono text-xs">
-                        c_user=1000123456789<br>
-                        xs=ABC123XYZ456DEF789<br>
-                        fr=DEF789GHI012JKL345<br>
-                        datr=MN0123OPQ456RST789
-                    </div>
+            <div class="bg-gray-900 p-4 rounded-lg mb-4">
+                <h4 class="font-semibold text-green-400 mb-2">Supported Cookie Format:</h4>
+                <div class="font-mono text-sm text-gray-300 bg-black p-3 rounded overflow-x-auto">
+                    wl_cbv=v2%3Bclient_version%3A2971%3Btimestamp%3A1762045256; locale=en_US; fr=0aF3ecRo6s7aVc2an.AWXyzk8ogeylk.BpBq0k..AAA.0.0.BpBq1J.AWdTfe10us9s8FILvzw; fbl_st=100715924%3BT%3A29367420; c_user=61568793447010; datr=R60GaXzmSuFM5e22uBbHJ8nl; xs=31%3AJGcssyFHCsQPWQ%3A2%3A1762045251%3A-1%3A-1; vpd=v1%3B835x428x3; pas=61568793447010%3A5h4YHcDBUj
                 </div>
+            </div>
 
-                <!-- Messages Instructions -->
-                <div class="bg-gray-700 p-4 rounded-lg">
-                    <h4 class="font-semibold text-blue-400 mb-2">💬 Messages Files:</h4>
-                    <ul class="text-sm text-gray-300 space-y-2 list-disc list-inside">
-                        <li>Create .txt file with your messages</li>
-                        <li>One message per line</li>
-                        <li>You can use emojis and special characters</li>
-                        <li>Example messages.txt content:</li>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="font-semibold text-blue-400 mb-2">How to Get Cookies:</h4>
+                    <ol class="text-sm text-gray-300 space-y-2 list-decimal list-inside">
+                        <li>Login to Facebook in Chrome</li>
+                        <li>Press <code class="bg-gray-700 px-1 rounded">F12</code> → <strong>Application</strong> tab</li>
+                        <li>Go to <strong>Cookies</strong> → <strong>https://facebook.com</strong></li>
+                        <li>Copy ALL cookies (select and copy)</li>
+                        <li>Paste in the cookies box above</li>
+                    </ol>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-green-400 mb-2">Required Cookies:</h4>
+                    <ul class="text-sm text-gray-300 space-y-1">
+                        <li>✅ <strong>c_user</strong> - Your Facebook ID</li>
+                        <li>✅ <strong>xs</strong> - Session token</li>
+                        <li>✅ <strong>fr</strong> - Facebook recognition</li>
+                        <li>✅ <strong>datr</strong> - Browser fingerprint</li>
+                        <li>✅ <strong>wl_cbv</strong> - Version info</li>
+                        <li>✅ <strong>locale</strong> - Language setting</li>
                     </ul>
-                    <div class="mt-2 p-3 bg-gray-900 rounded font-mono text-xs">
-                        Hello! 👋<br>
-                        Hi there! 😊<br>
-                        How are you?<br>
-                        Good morning! 🌞<br>
-                        What's up? 😎
-                    </div>
                 </div>
             </div>
         </div>
@@ -192,7 +198,7 @@
             startBtn.disabled = true;
             startBtn.textContent = 'STARTING BOT...';
             
-            // Create FormData for file upload
+            // Create FormData
             const formData = new FormData();
             
             // Add files and text
@@ -230,13 +236,13 @@
                 } else {
                     alert('ERROR: ' + data.error);
                     startBtn.disabled = false;
-                    startBtn.textContent = '🚀 START MESSAGE BOT';
+                    startBtn.textContent = '🚀 START FACEBOOK BOT';
                 }
                 
             } catch (error) {
                 alert('NETWORK ERROR: ' + error.message);
                 startBtn.disabled = false;
-                startBtn.textContent = '🚀 START MESSAGE BOT';
+                startBtn.textContent = '🚀 START FACEBOOK BOT';
             }
         });
         
@@ -253,29 +259,29 @@
                     // Update progress
                     document.getElementById('progressBar').style.width = status.progress + '%';
                     document.getElementById('statusMessage').textContent = status.message;
-                    document.getElementById('sentCount').textContent = `✅ Sent: ${status.sent || 0}`;
-                    document.getElementById('failedCount').textContent = `❌ Failed: ${status.failed || 0}`;
-                    document.getElementById('totalCount').textContent = `📊 Total: ${(status.sent || 0) + (status.failed || 0)}`;
+                    document.getElementById('sentCount').textContent = status.sent || 0;
+                    document.getElementById('failedCount').textContent = status.failed || 0;
+                    document.getElementById('totalCount').textContent = status.total_messages || 0;
                     
                     // Update logs
                     if (status.logs && status.logs.length > 0) {
                         document.getElementById('logs').innerHTML = status.logs
                             .map(log => {
                                 if (log.includes('✅')) {
-                                    return `<div class="text-green-400">${log}</div>`;
+                                    return `<div class="text-green-400 border-l-4 border-green-500 pl-2">${log}</div>`;
                                 } else if (log.includes('❌')) {
-                                    return `<div class="text-red-400">${log}</div>`;
+                                    return `<div class="text-red-400 border-l-4 border-red-500 pl-2">${log}</div>`;
                                 } else if (log.includes('⚠️')) {
-                                    return `<div class="text-yellow-400">${log}</div>`;
+                                    return `<div class="text-yellow-400 border-l-4 border-yellow-500 pl-2">${log}</div>`;
                                 } else if (log.includes('🚀') || log.includes('🎯') || log.includes('🎉')) {
-                                    return `<div class="text-blue-400 font-semibold">${log}</div>`;
+                                    return `<div class="text-blue-400 font-semibold border-l-4 border-blue-500 pl-2">${log}</div>`;
                                 } else {
-                                    return `<div class="text-gray-300">${log}</div>`;
+                                    return `<div class="text-gray-300 border-l-4 border-gray-500 pl-2">${log}</div>`;
                                 }
                             })
                             .join('');
                         
-                        // Auto scroll
+                        // Auto scroll to bottom
                         const logsDiv = document.getElementById('logs');
                         logsDiv.scrollTop = logsDiv.scrollHeight;
                     }
@@ -284,23 +290,29 @@
                     if (status.status === 'completed' || status.status === 'error') {
                         clearInterval(interval);
                         document.getElementById('startBtn').disabled = false;
-                        document.getElementById('startBtn').textContent = '🚀 START MESSAGE BOT';
+                        document.getElementById('startBtn').textContent = '🚀 START FACEBOOK BOT';
+                        
+                        if (status.status === 'completed') {
+                            document.getElementById('statusMessage').classList.add('text-green-400');
+                        } else {
+                            document.getElementById('statusMessage').classList.add('text-red-400');
+                        }
                     }
                     
                 } catch (error) {
-                    console.error('Error:', error);
+                    console.error('Error monitoring progress:', error);
                 }
             }, 2000);
         }
 
-        // File input handlers to disable textareas when files are selected
+        // File input handlers
         document.getElementById('cookies_file').addEventListener('change', function() {
             if (this.files.length > 0) {
                 document.getElementById('cookies_text').disabled = true;
                 document.getElementById('cookies_text').placeholder = 'File selected - using file cookies';
             } else {
                 document.getElementById('cookies_text').disabled = false;
-                document.getElementById('cookies_text').placeholder = 'c_user=1000123456789\nxs=ABC123XYZ456DEF789\nfr=DEF789GHI012JKL345\ndatr=MN0123OPQ456RST789';
+                document.getElementById('cookies_text').placeholder = 'wl_cbv=v2%3Bclient_version%3A2971%3Btimestamp%3A1762045256; locale=en_US; fr=0aF3ecRo6s7aVc2an.AWXyzk8ogeylk.BpBq0k..AAA.0.0.BpBq1J.AWdTfe10us9s8FILvzw; fbl_st=100715924%3BT%3A29367420; c_user=61568793447010; datr=R60GaXzmSuFM5e22uBbHJ8nl; xs=31%3AJGcssyFHCsQPWQ%3A2%3A1762045251%3A-1%3A-1; vpd=v1%3B835x428x3; pas=61568793447010%3A5h4YHcDBUj';
             }
         });
 
