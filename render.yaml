@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: aahan-file-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app -c gunicorn_config.py
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
